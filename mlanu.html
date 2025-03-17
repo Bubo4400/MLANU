@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MLANU</title>
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="radio-inputs">
+            <button class="button-logo" onclick="window.location.href='index.html'"><img src="logo.png" class="logo"></button>
+
+            <label class="radio">
+                <input type="radio" name="radio" checked="" value="home"/>
+                <span class="name" style="font-size: 130%;">HOME</span>
+            </label>
+            <label class="radio">
+                <input type="radio" name="radio" value="inscription"/>
+                <span class="name" style="font-size: 130%;">INSCRIPTION</span>
+            </label>
+            
+            <label class="radio">
+                <input type="radio" name="radio" value="rapports"/>
+                <span class="name" style="font-size: 130%;">RAPPORTS</span>
+            </label>
+
+            <label class="radio">
+                <input type="radio" name="radio" value="equipe"/>
+                <span class="name" style="font-size: 130%;">L'EQUIPE</span>
+            </label>
+        </div>
+        <script>
+            const radios = document.querySelectorAll('input[type="radio"]');
+    
+            radios.forEach((radio) => {
+                radio.addEventListener('click', () => {
+                    if (radio.value === 'home') {
+                        window.location.href = 'index.html';
+                    } else if (radio.value === 'inscription') {
+                        window.location.href = 'inscription.html';
+                    } else if (radio.value === 'rapports') {
+                        window.location.href = 'rapports.html';
+                    } else if (radio.value === 'equipe') {
+                        window.location.href = 'equipe.html';
+                    }
+                });
+            });
+        </script>
+        <div id="back">
+        </div>
+        <a href="rapports.html" style="text-decoration: none; color: inherit;"></a>
+            <div class="card">
+                <p class="card-title">Qu'est que c'est le MLANU ?</p>
+                <p class="card-des">
+                    Une modélisation des Nations unies (MNU), en anglais Model United Nations (MUN ou Model UN), est une simulation des Nations unies qui a pour but de former les participants aux négociations internationales.
+                    Ces simulations visent à promouvoir les Droits de l'homme, les compétences en communication et en relations internationales ainsi que les bases de la diplomatie. Dans le cadre des Modélisations des Nations unies, les étudiants prennent le rôle des ambassadeurs ou des ministres des Affaires étrangères en participant à des simulations de sections internationales de l’ONU. Les participants doivent ainsi faire des recherches sur les pays, les débats et les problèmes internationaux pour tenter de trouver des solutions aux problèmes mondiaux...
+                </p>
+                <p class="card-text">
+                <span>View More</span>
+                <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                </svg>
+                </p>
+            </div>
+        </a>
+        <div class="card2">
+            <div class="card2-overlay"></div>
+            <div class="card2-inner">YOUR<br>CONTENT<br>HERE</div>
+        </div>
+    </body>
+</html>
