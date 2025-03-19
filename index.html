@@ -7,77 +7,7 @@
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="icon" href="ressource/images/logo.png">
-    <style>
-        /* Add responsive styles */
-        .content-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .description {
-            flex: 1 1 45%;
-            min-width: 300px;
-            box-sizing: border-box;
-        }
-
-        .calendar {
-            flex: 1 1 45%;
-            min-width: 300px;
-            box-sizing: border-box;
-        }
-
-        .calendar .calendar-inner {
-            max-height: 500px;
-            overflow-y: auto;
-        }
-
-        /* Adjust calendar header and content for responsiveness */
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-
-        /* Ensure proper text size for description */
-        .description-title {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-        }
-
-        .description-des {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .description-text a {
-            font-size: 1rem;
-            text-decoration: none;
-        }
-
-        /* Adjust layout for small screens */
-        @media (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-            }
-
-            .description, .calendar {
-                flex: 1 1 100%;
-                margin-bottom: 20px;
-                padding: 10px;
-            }
-        }
-
-        .calendar-day.empty {
-            visibility: hidden;
-        }
-
-        .current-day {
-            background-color: #57b8eb; /* Highlight color */
-        }
-    </style>
+   
 </head>
 <body>
 <div class="radio-inputs">

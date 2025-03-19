@@ -8,9 +8,18 @@
     <link rel="stylesheet" href="../styles/equipe.css">
     <link rel="icon" href="../ressource/images/logo.png">
     <script>
-        if (window.innerWidth < 1000) {
-            window.location.href = "equipeMo.html";
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth < 1000) {
+                window.location.href = "equipeMo.html";
+            }
+
+            // Optional: Add event listener for resizing to handle dynamic changes
+            window.addEventListener('resize', function() {
+                if (window.innerWidth < 1000) {
+                    window.location.href = "equipeMo.html";
+                }
+            });
+        });
     </script>
 </head>
 <body>
