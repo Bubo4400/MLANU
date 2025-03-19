@@ -1,8 +1,12 @@
+/* General Styles */
 body {
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: #0A2D5E;  /* Dark blue background */
+    color: white;
 }
 
+/* Button Logo */
 .button-logo {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -11,6 +15,7 @@ body {
     outline: none;
 }
 
+/* Logo */
 .logo {
     position: relative;
     width: 5rem;
@@ -18,19 +23,21 @@ body {
     padding: 0rem 1rem 0rem 0rem;
 }
 
+/* Footer */
 .foot {
     position: relative;
-    background-color: #336b97;
+    background-color: #1f4f73;  /* A lighter blue for contrast */
     display: flex;
     width: 100vw;
     float: left;
     left: -0.5rem;
 }
 
+/* Radio Inputs */
 .radio-inputs {
     position: relative;
     display: flex;
-    background-color: #336b97;
+    background-color: #1f4f73;  /* Lighter blue */
     box-sizing: border-box;
     font-size: 14px;
     width: 100vw;
@@ -38,11 +45,11 @@ body {
     margin-left: -1%;
     margin-top: -1%;
 }
-  
+
 .radio-inputs .radio input {
     display: none;
 }
-  
+
 .radio-inputs .radio .name {
     display: flex;
     cursor: pointer;
@@ -52,53 +59,55 @@ body {
     border-top-right-radius: 0.5rem;
     border: none;
     padding: 0.5rem 0.8rem;
-    color: black;
+    color: #f1f1f1;  /* Lighter text for readability */
     transition: all 0.15s ease-in-out;
     position: relative;
     top: 3.3rem;
 }
-  
+
 .radio-inputs .radio input:checked + .name {
-    background-color: #e8e8e8;
+    background-color: #f1f1f1;  /* Lighter background when selected */
     font-weight: 600;
     font-size: 150%;
+    color: #0A2D5E; /* Dark blue text for contrast */
 }
 
 .radio-inputs .radio input + .name:hover {
     color: #fff;
 }
 .radio-inputs .radio input:checked + .name:hover {
-    color: #1d1d29;
+    color: #0a1d33;  /* Darker blue for hover */
 }
-  
+
 .radio-inputs .radio input:checked + .name::after,
 .radio-inputs .radio input:checked + .name::before {
     content: "";
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #336b97;
+    background-color: #1f4f73;  /* Matching blue */
     bottom: 0;
 }
-  
+
 .radio-inputs .radio input:checked + .name::after {
     right: -10px;
     border-bottom-left-radius: 300px;
-    box-shadow: -3px 3px 0px 3px #e8e8e8;
+    box-shadow: -3px 3px 0px 3px #f1f1f1;  /* Lighter shadow */
 }
 
 .radio-inputs .radio input:checked + .name::before {
     left: -10px;
     border-bottom-right-radius: 300px;
-    box-shadow: 3px 3px 0px 3px #e8e8e8;
+    box-shadow: 3px 3px 0px 3px #f1f1f1;  /* Lighter shadow */
 }
 
+/* Radio Modal Inputs */
 .radioMo-inputs {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     border-radius: 0.5rem;
-    background-color: #336b97;
+    background-color: #1f4f73;  /* Lighter blue */
     box-sizing: border-box;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
     padding: 0.25rem;
@@ -107,18 +116,18 @@ body {
     left: -1rem;
     top: -1rem;
     align-items: center;
-  }
-  
-  .radioMo-inputs .radioMo {
+}
+
+.radioMo-inputs .radioMo {
     flex: 1 1 auto;
     text-align: center;
-  }
-  
-  .radioMo-inputs .radioMo input {
+}
+
+.radioMo-inputs .radioMo input {
     display: none;
-  }
-  
-  .radioMo-inputs .radioMo .name {
+}
+
+.radioMo-inputs .radioMo .name {
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -128,22 +137,24 @@ body {
     padding: .5rem 0;
     transition: all .15s ease-in-out;
 }
-  
+
 .radioMo-inputs .radioMo input:checked + .name {
     background-color: #fff;
     font-weight: 600;
 }
 
+/* Wrapper */
 .wrapper {
     display: inline-flex;
     list-style: none;
     height: 120px;
     width: 100%;
     padding-top: 50px;
-    font-family: "Poppins", sans-serif; 
-  }
-  
-  .wrapper .icon {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Icons in Wrapper */
+.wrapper .icon {
     position: relative;
     background: #fff;
     border-radius: 50%;
@@ -158,9 +169,10 @@ body {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip {
+}
+
+/* Tooltip for Icons */
+.wrapper .tooltip {
     position: absolute;
     top: 0;
     font-size: 14px;
@@ -172,9 +184,9 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip::before {
+}
+
+.wrapper .tooltip::before {
     position: absolute;
     content: "";
     height: 8px;
@@ -184,38 +196,33 @@ body {
     left: 50%;
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .icon:hover .tooltip {
+}
+
+.wrapper .icon:hover .tooltip {
     top: -45px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-  }
-  
-  .wrapper .icon:hover span,
-  .wrapper .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  .wrapper .facebook:hover,
-  .wrapper .facebook:hover .tooltip,
-  .wrapper .facebook:hover .tooltip::before {
-    background: #0f1d42;
+}
+
+/* Social Media Icons Hover Effects */
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #0f1d42;  /* Darker blue for Facebook */
     color: #fff;
-  }
-  
-  .wrapper .twitter:hover,
-  .wrapper .twitter:hover .tooltip,
-  .wrapper .twitter:hover .tooltip::before {
-    background: #0f1d42;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #0f1d42;  /* Darker blue for Twitter */
     color: #fff;
-  }
-  
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tooltip,
-  .wrapper .instagram:hover .tooltip::before {
-    background: #0f1d42;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #0f1d42;  /* Darker blue for Instagram */
     color: #fff;
-  }
-  
+}
