@@ -17,6 +17,19 @@ body {
     background-size: cover;
 }
 
+#backMo {
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+    height: 90vh;
+    width: 100vw;
+
+    background-image: url('../ressource/images/suisse.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .description {
     background-color: #0A2D5E;
     border: 5px solid #ffffff;

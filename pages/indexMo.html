@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLANU</title>
-    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/menu.css"> 
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="icon" href="../ressource/images/logo.png">
-    <script>
+    <script
         document.addEventListener("DOMContentLoaded", function() {
             if (window.innerWidth >= 1000) {
                 window.location.href = "../index.html";
@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="radioMo-inputs">
-    <img src="../ressource/images/logo.png" alt="MLANU Logo" class="logo" style="padding: 0.5rem;">
+    <img src="../ressource/images/logo.png" style="padding: 0.5rem;" class="logo">
 
     <label class="radioMo">
         <input type="radio" name="radioMo" value="home" checked>
@@ -42,7 +42,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll('input[name="radioMo"]').forEach((radio) => {
+        document.querySelectorAll('input[name="radio"]').forEach((radio) => {
             radio.addEventListener('change', function() {
                 const page = this.value === 'home' ? '../index.html' : `${this.value}.html`;
                 window.location.href = page;
@@ -53,14 +53,14 @@
 
 <div id="backMo"></div>
 
-<div class="descriptionMo" style="cursor: pointer;">
-    <p class="descriptionMo-title">Qu'est-ce que le MLANU ?</p>
-    <p class="descriptionMo-des">
-        Une modélisation des Nations unies (MNU), en anglais Model United Nations (MUN ou Model UN), est une simulation des Nations unies qui a pour but de former les participants aux négociations internationales...
+<div class="description" style="cursor: pointer;">
+    <p class="description-title">Qu'est-ce que le MLANU ?</p>
+    <p class="description-des">
+        Une délisation des Nations unies (MNU), en anglais del United Nations (MUN ou del UN), est une simulation des Nations unies qui a pour but de former les participants aux négociations internationales...
     </p>
-    <p class="descriptionMo-text">
-        <a href="rapports.html" class="view-more">
-            <span>View More</span>
+    <p class="description-text">
+        <a href="rapports.html" class="view-re">
+            <span>View re</span>
             <svg class="arrow-icon" stroke="currentColor" fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
             </svg>
@@ -69,8 +69,24 @@
 </div>
 
 <script>
-    document.querySelector('.descriptionMo').addEventListener('click', function() {
+    document.querySelector('.description').addEventListener('click', function() {
         window.location.href = 'rapports.html';
+    });
+
+    const radios = document.querySelectorAll('input[type="radio"]');
+
+    radios.forEach((radio) => {
+        radio.addEventListener('click', () => {
+            if (radio.value === 'home') {
+                window.location.href = '../index.html';
+            } else if (radio.value === 'inscription') {
+                window.location.href = 'inscription.html';
+            } else if (radio.value === 'rapports') {
+                window.location.href = 'rapports.html';
+            } else if (radio.value === 'equipe') {
+                window.location.href = 'equipe.html';
+            }
+        });
     });
 </script>
 

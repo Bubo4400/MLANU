@@ -139,8 +139,10 @@ body {
 }
 
 .radioMo-inputs .radioMo input:checked + .name {
-    background-color: #fff;
+    background-color: #f1f1f1;  /* Lighter background when selected */
     font-weight: 600;
+    font-size: 150%;
+    color: #0A2D5E; /* Dark blue text for contrast */
 }
 
 /* Wrapper */
