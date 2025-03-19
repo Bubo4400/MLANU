@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLANU</title>
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="icon" href="../ressource/images/logo.png">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth >= 1000) {
+                window.location.href = "../index.html";
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="radioMo-inputs">
+    <img src="../ressource/images/logo.png" alt="MLANU Logo" class="logo" style="padding: 0.5rem;">
+
+    <label class="radioMo">
+        <input type="radio" name="radioMo" value="home" checked>
+        <span class="name">HOME</span>
+    </label>
+
+    <label class="radioMo">
+        <input type="radio" name="radioMo" value="inscription">
+        <span class="name">INSCRIPTION</span>
+    </label>
+
+    <label class="radioMo">
+        <input type="radio" name="radioMo" value="rapports">
+        <span class="name">RAPPORTS</span>
+    </label>
+
+    <label class="radioMo">
+        <input type="radio" name="radioMo" value="equipe">
+        <span class="name">L'EQUIPE</span>
+    </label>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('input[name="radioMo"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                const page = this.value === 'home' ? '../index.html' : `${this.value}.html`;
+                window.location.href = page;
+            });
+        });
+    });
+</script>
+
+<div id="backMo"></div>
+
+<div class="descriptionMo" style="cursor: pointer;">
+    <p class="descriptionMo-title">Qu'est-ce que le MLANU ?</p>
+    <p class="descriptionMo-des">
+        Une modélisation des Nations unies (MNU), en anglais Model United Nations (MUN ou Model UN), est une simulation des Nations unies qui a pour but de former les participants aux négociations internationales...
+    </p>
+    <p class="descriptionMo-text">
+        <a href="rapports.html" class="view-more">
+            <span>View More</span>
+            <svg class="arrow-icon" stroke="currentColor" fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+            </svg>
+        </a>
+    </p>
+</div>
+
+<script>
+    document.querySelector('.descriptionMo').addEventListener('click', function() {
+        window.location.href = 'rapports.html';
+    });
+</script>
+
+<div class="foot">
+    <ul class="wrapper">
+        <li class="icon instagram">
+            <a href="https://www.instagram.com/mun_lorientais_autogere" target="_blank" aria-label="Instagram">
+                <span class="tooltip">Instagram</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 ..."></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

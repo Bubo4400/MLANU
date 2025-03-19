@@ -4,30 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MLANU</title>
-        <link rel="stylesheet" href="menu.css">
-        <link rel="stylesheet" href="home.css">
-        <link rel="icon" href="logo.png">
+        <link rel="stylesheet" href="../styles/menu.css">
+        <link rel="stylesheet" href="../styles/home.css">
+        <link rel="icon" href="../ressource/images/logo.png">
         <script>
             if (window.innerWidth <= 767) {
-                window.location.href = "rapportMo.html";
+                window.location.href = "inscriptionMo.html";
             }
         </script>
     </head>
     <body>
         <div class="radio-inputs">
-            <button class="button-logo" onclick="window.location.href='index.html'"><img src="logo.png" class="logo"></button>
+            <button class="button-logo" onclick="window.location.href='../index.html'"><img src="../ressource/images/logo.png" class="logo"></button>
 
             <label class="radio">
-                <input type="radio" name="radio" checked="" value="home"/>
+                <input type="radio" name="radio" value="home"/>
                 <span class="name" style="font-size: 130%;">HOME</span>
             </label>
             <label class="radio">
-                <input type="radio" name="radio" value="inscription"/>
+                <input type="radio" name="radio" value="inscription" checked=""/>
                 <span class="name" style="font-size: 130%;">INSCRIPTION</span>
             </label>
             
             <label class="radio">
-                <input type="radio" name="radio" value="rapports" checked=""/>
+                <input type="radio" name="radio" value="rapports"/>
                 <span class="name" style="font-size: 130%;">RAPPORTS</span>
             </label>
 
@@ -42,7 +42,7 @@
             radios.forEach((radio) => {
                 radio.addEventListener('click', () => {
                     if (radio.value === 'home') {
-                        window.location.href = 'index.html';
+                        window.location.href = '../index.html';
                     } else if (radio.value === 'inscription') {
                         window.location.href = 'inscription.html';
                     } else if (radio.value === 'rapports') {

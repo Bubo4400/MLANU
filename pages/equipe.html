@@ -2,38 +2,38 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=1920 height=1080">
         <title>MLANU</title>
-        <link rel="stylesheet" href="menu.css">
-        <link rel="stylesheet" href="home.css">
-        <link rel="icon" href="logo.png"><script>
-            if (window.innerWidth >= 1000) {
-                window.location.href = "index.html";
+        <link rel="stylesheet" href="../styles/menu.css">
+        <link rel="stylesheet" href="../styles/equipe.css">
+        <link rel="icon" href="../ressource/images/logo.png">
+        <script>
+            if (window.innerWidth < 1000) {
+                window.location.href = "equipeMo.html";
             }
         </script>
     </head>
     <body>
-        <div class="radioMo-inputs">
-            <img src="logo.png" style="padding:  0.5rem 0.5rem 0 0.5rem;" class="logo">
+        <div class="radio-inputs">
+            <button class="button-logo" onclick="window.location.href='index.html'"><img src="../ressource/images/logo.png" class="logo"></button>
 
-            <label class="radioMo">
-              <input type="radio" name="radioMo" value="home" checked="">
-              <span class="name">HOME</span>
+            <label class="radio">
+                <input type="radio" name="radio" value="home"/>
+                <span class="name" style="font-size: 130%;">HOME</span>
+            </label>
+            <label class="radio">
+                <input type="radio" name="radio" value="inscription"/>
+                <span class="name" style="font-size: 130%;">INSCRIPTION</span>
+            </label>
+            
+            <label class="radio">
+                <input type="radio" name="radio" value="rapports"/>
+                <span class="name" style="font-size: 130%;">RAPPORTS</span>
             </label>
 
-            <label class="radioMo">
-                <input type="radio" name="radioMo" value="inscription">
-                <span class="name">INSCRIPTION</span>
-              </label>
-
-            <label class="radioMo">
-              <input type="radio" name="radioMo" value="rapports">
-              <span class="name">RAPPORTS</span>
-            </label>
-                
-            <label class="radioMo">
-              <input type="radio" name="radioMo" value="equipe">
-              <span class="name">L'EQUIPE</span>
+            <label class="radio">
+                <input type="radio" name="radio" value="equipe" checked=""/>
+                <span class="name" style="font-size: 130%;">L'EQUIPE</span>
             </label>
         </div>
         <script>
@@ -42,7 +42,7 @@
             radios.forEach((radio) => {
                 radio.addEventListener('click', () => {
                     if (radio.value === 'home') {
-                        window.location.href = 'index.html';
+                        window.location.href = '../index.html';
                     } else if (radio.value === 'inscription') {
                         window.location.href = 'inscription.html';
                     } else if (radio.value === 'rapports') {
@@ -54,32 +54,30 @@
             });
         </script>
 
-        <div id="backMo">
+        <div id="back">
         </div>
 
-        <div class="descriptionMo" style="cursor: pointer;">
-            <p class="descriptionMo-title">Qu'est ce que c'est le MLANU ?</p>
-            <p class="descriptionMo-des">
-                Une modélisation des Nations unies (MNU), en anglais Model United Nations (MUN ou Model UN), est une simulation des Nations unies qui a pour but de former les participants aux négociations internationales.
-                Ces simulations visent à promouvoir les Droits de l'homme, les compétences en communication et en relations internationales ainsi que les bases de la diplomatie. Dans le cadre des Modélisations des Nations unies, les étudiants prennent le rôle des ambassadeurs ou des ministres des Affaires étrangères en participant à des simulations de sections internationales de l’ONU. Les participants doivent ainsi faire des recherches sur les pays, les débats et les problèmes internationaux pour tenter de trouver des solutions aux problèmes mondiaux...
-            </p>
-            <br>
-            <p class="descriptionMo-text">
-                <a href="rapports.html" style="text-decoration: none; color: inherit;">
-                    <span>View More</span>
-                    <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
-                    </svg>
-                </a>
-            </p>
+        <div id="Team">
+            <div id="ArthurBloc">
+                <h1>Arthur</h1>
+                <p class="TextL">
+                    Je m'appelle Arthur, je suis gay et j'aime les ....
+                </p>
+            </div>
+            <img src="../ressource/images/Arthur.jpg" id="ArthurImg">
         </div>
-        <script>
-            document.querySelector('.description').addEventListener('click', function() {
-                window.location.href = 'rapports.html';
-            });
-        </script>
 
-        <div class="foot">
+        <div id="Team">
+            <div id="EthanBloc">
+                <h1>Ethan</h1>
+                <p class="TextR">
+                    Je m'appelle Ethan
+                </p>
+            </div>
+            <img src="../ressource/images/Ethan.jpg" id="EthanImg">
+        </div>
+
+        <div class="foot" style="top: 5rem;">
             <ul class="wrapper">
                 <a href="https://www.instagram.com/mun_lorientais_autogere?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                     <li class="icon instagram">

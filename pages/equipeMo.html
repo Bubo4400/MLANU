@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MLANU</title>
-        <link rel="stylesheet" href="menu.css">
-        <link rel="stylesheet" href="equipe.css">
-        <link rel="icon" href="logo.png"><script>
+        <link rel="stylesheet" href="../styles/menu.css">
+        <link rel="stylesheet" href="../styles/equipe.css">
+        <link rel="icon" href="../ressource/images/logo.png"><script>
             if (window.innerWidth >= 1000) {
                 window.location.href = "equipe.html";
             }
@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="radioMo-inputs">
-            <img src="logo.png" style="padding:  0.5rem 0.5rem 0 0.5rem;" class="logo">
+            <img src="../ressource/images/logo.png" style="padding:  0.5rem 0.5rem 0 0.5rem;" class="logo">
 
             <label class="radioMo">
               <input type="radio" name="radioMo" value="home">
@@ -42,7 +42,7 @@
             radios.forEach((radio) => {
                 radio.addEventListener('click', () => {
                     if (radio.value === 'home') {
-                        window.location.href = 'index.html';
+                        window.location.href = '../index.html';
                     } else if (radio.value === 'inscription') {
                         window.location.href = 'inscription.html';
                     } else if (radio.value === 'rapports') {
@@ -64,7 +64,7 @@
                     Je m'appelle Arthur
                 </p>
             </div>
-            <img src="Arthur.jpg" id="ArthurImgMo">
+            <img src="../ressource/images/Arthur.jpg" id="ArthurImgMo">
         </div>
 
         <div id="TeamMo">
@@ -74,7 +74,7 @@
                     Je m'appelle EthanBloc
                 </p>
             </div>
-            <img src="Ethan.jpg" id="EthanImgMo">
+            <img src="../ressource/images/Ethan.jpg" id="EthanImgMo">
         </div>
 
         <div class="foot" style="top: 5rem;">
